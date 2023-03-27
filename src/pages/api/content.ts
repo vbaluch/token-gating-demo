@@ -36,7 +36,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             } else {
               res
                 .status(401)
-                .json("Unauthorized, you do not own the required ERC721 NFT.");
+                .end("Unauthorized, you do not own the required ERC721 NFT.");
             }
           } catch (_error) {
             res.status(500).end("Unknown server error.");
